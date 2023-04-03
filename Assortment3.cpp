@@ -1,34 +1,31 @@
 #include<stdio.h>
-int main()
-{
-	
-//int a[]={45,78,74,71,78,76,72,73,85,89,86},i,n;
 
-//	printf("Size of Array = %d",n);
-    int a[100],i,n1,n2;
-	printf("Enter Size of Array : ");
-	scanf("%d",&n1);
-	
-	for(i=0;i<n1;i++)
-	    {
-		printf("a[%d]=",i);
-		scanf("%d",&a[i]);
-    	}
-	    printf("Origanal Array is :");	
-	for(i=0;i<n1;i++)
-    	{
-		printf("%d ",a[i]);
-    	}
-    	
-    printf("\nEnter Right Rotate Value : ");
-	scanf("%d",&a[i]);
-	
-	 printf("Right Rotate Array is :");	
-	for(i=0;i<a[i-1];i++)
-    	{
-		printf("%d ",a[i-1]);
-    	}
-	
-	
+ int main()
+{
+	int i,j,last,n=3,a[]={1,2,3,4,5,6};
+	int length=sizeof(a)/sizeof(a[0]);
+
+	printf("Values of Array=\n");
+	for (i=0;i<length;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+	for (i=0;i<n;i++)
+	{
+		last=a[length-1];
+
+	for(j=length-1;j>0;j--)
+	{
+		a[j]=a[j-1];
+		}
+		a[0]=last;
+	}
+	printf("\n");
+
+	printf("Right Rotation Array=\n");
+	for (i=0;i<length;i++)
+	{
+		printf("%d\n",a[i]);
+	}
 	return 0;
 }
